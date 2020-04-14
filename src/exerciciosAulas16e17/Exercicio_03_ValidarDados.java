@@ -20,7 +20,7 @@ public class Exercicio_03_ValidarDados {
 		String nome, sexo, estadoCivil;
 		double idade, salario;
 		boolean validaNome, validaIdade, validaSalario, validaSexo, validaEstadoCivil = false;
-		/*
+		
 		do {
 			System.out.print("Digite seu nome: ");
 			nome = scan.next();
@@ -72,7 +72,7 @@ public class Exercicio_03_ValidarDados {
 				System.out.println("O sexo deve ser 'm' ou 'f'. Digite novamente o seu sexo.");
 			}
 		} while (!validaSexo);
-		*/
+		
 		do {
 			System.out.println("Digite o seu estado civil (\n's' - solteiro(a) \n'c' - casado(a) \n'v' - viúvo(a) \n'd' - divorciado(a)");
 			estadoCivil = scan.next();

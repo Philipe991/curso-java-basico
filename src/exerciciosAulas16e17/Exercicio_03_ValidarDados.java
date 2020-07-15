@@ -18,14 +18,15 @@ public class Exercicio_03_ValidarDados {
 		Scanner scan = new Scanner(System.in);
 		
 		String nome, sexo, estadoCivil;
-		double idade, salario;
+		int idade;
+		double salario;
 		boolean validaNome, validaIdade, validaSalario, validaSexo, validaEstadoCivil = false;
 		
 		do {
 			System.out.print("Digite seu nome: ");
 			nome = scan.next();
 			
-			if(nome.length()<3) {
+			if(nome.length()<=3) {
 				validaNome = false;
 				System.out.println("Seu nome deve conter mais do que três caracteres. Digite novamente o seu nome.");
 			} else {
@@ -36,7 +37,7 @@ public class Exercicio_03_ValidarDados {
 		
 		do {
 			System.out.print("Digite sua idade: ");
-			idade = scan.nextDouble();
+			idade = scan.nextInt();
 			
 			if(idade < 0 || idade >150) {
 				validaIdade = false;
@@ -77,7 +78,10 @@ public class Exercicio_03_ValidarDados {
 			System.out.println("Digite o seu estado civil (\n's' - solteiro(a) \n'c' - casado(a) \n'v' - viúvo(a) \n'd' - divorciado(a)");
 			estadoCivil = scan.next();
 			
-			if(estadoCivil.equalsIgnoreCase("s") || estadoCivil.equalsIgnoreCase("c") || estadoCivil.equalsIgnoreCase("v") || estadoCivil.equalsIgnoreCase("d")) {
+			if(estadoCivil.equalsIgnoreCase("s") || 
+					estadoCivil.equalsIgnoreCase("c") || 
+					estadoCivil.equalsIgnoreCase("v") || 
+					estadoCivil.equalsIgnoreCase("d")) {
 				validaEstadoCivil = true;
 				System.out.println("Estado civil válido!");
 			} else {
@@ -85,6 +89,13 @@ public class Exercicio_03_ValidarDados {
 				System.out.println("O estado civil é inválido. Digite novamente o seu estado civil.\n");
 			}
 		} while (!validaEstadoCivil);
+		
+		System.out.println("Dados informados:");
+		System.out.println("Nome: " + nome);
+		System.out.println("Idade: " + idade);
+		System.out.println("Salário: " + salario);
+		System.out.println("Sexo: " + sexo);
+		System.out.println("Estado cívil: " + estadoCivil);
 
 	}
 

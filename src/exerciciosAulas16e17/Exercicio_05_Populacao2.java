@@ -1,6 +1,8 @@
 package exerciciosAulas16e17;
 
-public class Exercicio_04_Populacao {
+import java.util.Scanner;
+
+public class Exercicio_05_Populacao2 {
 
 	public static void main(String[] args) {
 		/*
@@ -9,23 +11,36 @@ public class Exercicio_04_Populacao {
 		 * de 3% e que a população B seja de 200000 habitantes com uma taxa de crescimento de 1,5%. Faça um programa
 		 * que calcule e escreva o número de anos necessários para que a população do país A ultrapasse ou iguale a 
 		 * população do país B, mantidas as taxas de crescimento.
+		 * 
+		 * Altere o programa acima permitindo que o usuário informar as populações e a taxa de crescimento iniciais.
+		 * Valide a entrada e permita repetir a operação.
 		 */
 		
+		Scanner scan = new Scanner(System.in);
 		
 		double a, b, pA, pB;
 		int anos = 0;
 		boolean comparador = false;
-		a = 80000;
-		b = 200000;
-		pA = 0.03;
-		pB = 0.015;
+		boolean repetirOp = false;
+		
+		do {
 			
+		System.out.println("Informe a população inicial do país A: ");
+		a = scan.nextDouble();
+		System.out.println("Informe a taxa anual de crescimento da população do país A: ");
+		pA = scan.nextDouble();
+		
+		System.out.println("Informe a população inicial do país B: ");
+		b = scan.nextDouble();
+		System.out.println("Informe a taxa anual de crescimento da população do país B: ");
+		pB = scan.nextDouble();
+		
 		System.out.println("Ano: " + anos + ". População país A: " + a + " População país B: " + b);
 		
 		do {
 			
-			a = a + (a*pA);
-			b = b + (b*pB);
+			a = a + (a*(pA/100));
+			b = b + (b*(pB/100));
 			anos++;
 			
 			if(a < b) {
@@ -43,22 +58,19 @@ public class Exercicio_04_Populacao {
 						
 		} while (!comparador);
 		
+		System.out.print("Deseja informar novos dados? (S ou N)");
+		String refazer = scan.next();
 		
-		/*		Resolução Loiane:
-		
-		int popA = 80000, popB = 200000, cont = 0;
-		
-		while(popA < popB) {
-			
-			popA += (popA/100) * 3;
-			popB += (popB/100) * 1.5;
-			cont++;
+		if(refazer.equalsIgnoreCase("S")) {
+			repetirOp = true;
+		} else if (refazer.equalsIgnoreCase("N")) {
+			repetirOp = false;
+		} else {
+			System.out.println("Opção inválida!");
 		}
 		
-		System.out.println("População A: " + popA + "\nPopulação B: " + popB + "\nAnos: " + cont);
+		} while (!repetirOp);
 		
-		*/
-
 	}
 
 }

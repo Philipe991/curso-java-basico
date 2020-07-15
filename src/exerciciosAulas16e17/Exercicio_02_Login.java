@@ -16,10 +16,12 @@ public class Exercicio_02_Login {
 		boolean validarLogin = false;
 	
 		do {
+			
 			System.out.print("Entre com o login: ");
 			login = scan.next();
 			System.out.print("Entre com a senha: ");
 			senha = scan.next();
+			
 			if(login.equalsIgnoreCase(senha)) {
 				validarLogin = false;
 				System.out.println("Login e senha iguais! Entre novamente com os dados.");
@@ -27,6 +29,7 @@ public class Exercicio_02_Login {
 				validarLogin = true;
 				System.out.println("Login realizado com sucesso!");
 			}
+			
 		} while(!validarLogin);
 						
 	}

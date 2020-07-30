@@ -32,6 +32,15 @@ public class Exercicio_13_BaseExpoente {
 		
 		System.out.println("Potencia: " + base + " ^ " + expoente + " = " + resultado);
 		
+		// Resolução Loiane
+		
+		resultado = base;
+		
+		for(int i = 1; i < expoente; i++) {
+			resultado *= base;
+		}
+		System.out.println();
+		System.out.println("Resultado: " + resultado);
 	}
 
 }

@@ -27,6 +27,18 @@ public class Exercicio_17_Fatorial {
 			resultado = fatorial;
 									
 		}
+		
+		// Resolução Loiane
+		
+		System.out.println("Informe o número para calcular o fatorial: ");
+		int num = scan.nextInt();
+		
+		int fat = 1;
+		
+		for(int i = num; i>0 ; i--) {
+			fat *= i;
+			System.out.println(fat);
+		}
 				
 	}
 

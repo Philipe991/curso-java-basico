@@ -11,10 +11,10 @@ public class Exercicio_16_FibonacciLimitado {
 		 * Faça um programa que gere a série até que o valor seja maior que 500.
 		 */
 		
-		int atual = 0, proximo = 1, resultado, limite;
+		int atual = 0, proximo = 1, resultado = 0;
 				
 		
-				for(; 500 >= atual ; ) {
+				for(; 500 > resultado ; ) {
 					
 					resultado = atual;
 					System.out.print(resultado + " ");
@@ -23,7 +23,24 @@ public class Exercicio_16_FibonacciLimitado {
 					atual = resultado;
 								
 				}
-		
+				
+				System.out.println();
+			/*
+				// Resolução Loiane
+				
+				int primeiro = 1, segundo =1, proximo2 = 0;
+				System.out.print(primeiro + " ");
+				System.out.print(segundo + " ");
+				
+				while(proximo2 <= 500) {
+					
+					proximo2 = primeiro + segundo;
+					primeiro = segundo;
+					segundo = proximo2;
+					System.out.print(proximo2 + " ");
+						
+				}
+			*/	
 	}
 
 }

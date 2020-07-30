@@ -44,6 +44,23 @@ public class Exercicio_14_DezNum {
 		System.out.println("\n\nQuantidade de número ímpares: " + impar);
 		System.out.println("Quantidade de número pares: " + par);
 		
+		// Resolução Loiane
+		
+		int num, pares = 0, impares = 0;
+		
+		for(int i = 0; i < 10; i++) {
+			System.out.println("Entre com um número: ");
+			num = scan.nextInt();
+			
+			if(num % 2 == 0) {
+				pares++;
+			} else {
+				impares++;
+			}
+		}
+		
+		System.out.println("Quantide de números impares: " + impares);
+		System.out.println("Quantide de números pares:   " + pares);
 	}
 
 }
